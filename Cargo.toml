@@ -1,0 +1,29 @@
+[package]
+name = "aoc-2020"
+version = "0.1.0"
+authors = ["Dan <dan@yellowiki.xyz>"]
+edition = "2018"
+
+[lib]
+name = "aoc"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust-crypto = "0.2.36"
+defaultmap = "0.5.0"
+itertools = { git = "https://github.com/rust-itertools/itertools" }
+derive_more = "0.99.11"
+util = { path = "./util" }
+cached = "0.22.0"
+fasthash = "0.4.0"
+mimalloc = { version = "0.1.22", default-features = false }
+regex = "1"
+array2d = "0.2.1"
+multimap = "0.8.2"
+propane = "0.1.0"
+
+[profile.release]
+overflow-checks = true
+debug = true
+lto = "thin"
