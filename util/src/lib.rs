@@ -31,7 +31,7 @@ pub fn run_benchmark(mut main: impl Send + FnMut() -> String, file: &str) {
 
 	let start = Instant::now();
 
-	while total < Duration::from_secs(10) {
+	while total < Duration::from_secs(10) && data.len() < 5000 {
 		let start = Instant::now();
 		black_box(main());
 		let elapsed = start.elapsed();
