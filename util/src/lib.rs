@@ -8,6 +8,11 @@ use std::{
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 pub use util_proc_macro::*;
 
+use mimalloc::MiMalloc;
+
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
+
 fn format_duration(d: Duration) -> String {
 	if d < Duration::from_millis(2) {
 		format!("{}μs", d.as_micros())

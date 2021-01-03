@@ -1,10 +1,5 @@
 use derive_more::{Add, AddAssign, Mul, MulAssign, Sub, SubAssign};
 
-use mimalloc::MiMalloc;
-
-#[global_allocator]
-static GLOBAL: MiMalloc = MiMalloc;
-
 #[derive(
 	Add,
 	AddAssign,

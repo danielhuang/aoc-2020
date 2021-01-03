@@ -11,3 +11,4 @@ util_proc_macro = { path = "./util_proc_macro" }
 criterion = "0.3.3"
 crossbeam = "0.8.0"
 termcolor = "1.1.2"
+mimalloc = { version = "0.1.22", default-features = false }
